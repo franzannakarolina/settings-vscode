@@ -1,0 +1,87 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "workbench.colorTheme": "Favorite Monokai version",
+
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.lineNumbers": "on",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "workerbench.editor.tabSizing": "shrink",
+  "workerbench.activityBar.visible": true,
+  "editor.inlineSuggest.enabled": true,
+  "[pascal]": {
+    "files.encoding": "windows1252"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn"
+  },
+  "terminal.integrated.fontSize": 16,
+
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.keymap": "none",
+  "bookmarks.navigateThroughAllFiles": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.label.suggestion": "useWhenSelected",
+  "bookmarks.multicursor.toggleMode": "allLinesAtOnce",
+
+  "eslint.lintTask.enable": true,
+  "editor.tabSize": 2,
+  "window.newWindowDimensions": "offset",
+  "tabnine.experimentalAutoImports": true,
+  "kite.showWelcomeNotificationOnStartup": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[tsx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "json.maxItemsComputed": 5000,
+  "typescript.suggest.autoImport": true,
+
+  // zen mode
+  "zenMode.centerLayout": false,
+  "zenMode.hideTabs": true,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideActivityBar": true,
+  "zenMode.restore": true,
+  "zenMode.fullScreen": false,
+  "zenMode.silentNotifications": true,
+  "breadcrumbs.enabled": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // formatter
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "auto"
+}
