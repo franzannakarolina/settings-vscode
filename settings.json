@@ -1,113 +1,79 @@
 {
-  "editor.matchBrackets": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "editor.fontFamily": "Operator Mono",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontFamily": "Dank Mono",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          //following will be in italic
-          "comment",
-          "entity.name.type.class", //class names
-          "constant", //String, Number, Boolean…, this, super
-          "storage.modifier", //static keyword
-          "storage.type.class.js", //class keyword
-          "keyword" //import, export, return…
-        ],
-        "settings": {
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "scope": [
-          //following will be excluded from italics (VSCode has some defaults for italics)
+    "editor.wordWrapColumn": 88,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        88
+    ],
+    "terminal.integrated.fontSize": 13,
+    "editor.renderIndentGuides": false,
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": true,
+    "editor.renderControlCharacters": false,
+    "workbench.colorTheme": "Monokai",
+    // "editor.fontFamily": "Monaco",
+    "files.trimTrailingWhitespace": true,
+    "editor.lineHeight": 22,
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.feedback.visible": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "*/.js.map": true,
+        "*/.js": {
+            "when": "$(basename).ts"
+        },
+        "*/.pyc": {
+            "when": "$(basename).py"
+        },
+        "**/_pycache_": true,
+        "*/.jar": {
+            "when": "$(basename).kt"
+        },
+    },
+    "workbench.tree.indent": 25,
+    "editor.fontWeight": "100",
+    // Python settings
+    "python.autoComplete.extraPaths": [
+        "/"
+    ],
+    "python.autoComplete.addBrackets": true,
+    "python.venvPath": "~/venv/",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "venv/bin/python",
+    "python.linting.flake8Args": [
+        "--max-line-length=88",
+        // "--ignore=E402,F841,F401,E302,E305",
+    ],
+    "python.sortImports.path": "~/.virtualenvs/vscode/bin/isort",
+    "python.formatting.provider": "black",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.editor.enablePreview": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.insidersChannel": "off",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.extraPaths": [
+        "wallet/chalicelib"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "liveServer.settings.donotShowInfoMsg": true,
 
-          "invalid",
-          "keyword.operator",
-          "constant.numeric.css",
-          "keyword.other.unit.px.css",
-          "constant.numeric.decimal.js",
-          "constant.numeric.json"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  },
-
-  "editor.lineNumbers": "on",
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 120,
-  "editor.inlineSuggest.enabled": true,
-  "[pascal]": {
-    "files.encoding": "windows1252"
-  },
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn"
-  },
-
-  "gitlens.currentLine.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.statusBar.enabled": false,
-  "gitlens.keymap": "none",
-  "bookmarks.navigateThroughAllFiles": true,
-  "bookmarks.sideBar.expanded": true,
-  "bookmarks.label.suggestion": "useWhenSelected",
-  "bookmarks.multicursor.toggleMode": "allLinesAtOnce",
-
-  "eslint.lintTask.enable": true,
-  "editor.tabSize": 2,
-  "window.newWindowDimensions": "offset",
-  "tabnine.experimentalAutoImports": true,
-  "kite.showWelcomeNotificationOnStartup": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.definitionLinkOpensInPeek": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[tsx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.donotVerifyTags": true,
-  "json.maxItemsComputed": 5000,
-
-  // zen mode
-  "zenMode.centerLayout": false,
-  "zenMode.hideTabs": true,
-  "zenMode.hideStatusBar": true,
-  "zenMode.hideActivityBar": true,
-  "zenMode.restore": true,
-  "zenMode.fullScreen": false,
-  "zenMode.silentNotifications": true,
-  "breadcrumbs.enabled": false,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
 
   // formatter
   "prettier.tabWidth": 2,
