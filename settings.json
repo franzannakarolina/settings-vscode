@@ -4,7 +4,9 @@
     "editor.rulers": [
         88
     ],
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 14,
+    "editor.fontFamily": "'Fira Code', 'monospace', monospace",
+    "editor.fontLigatures": true,
     "editor.renderIndentGuides": false,
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": true,
@@ -81,6 +83,22 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
   "prettier.arrowParens": "avoid",
-  "prettier.endOfLine": "auto",
-  "workbench.colorTheme": "InternetstormBold"
+    "prettier.endOfLine": "auto",
+    "tabnine.experimentalAutoImports": true,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "workbench.startupEditor": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "auto",
+    "git.enableSmartCommit": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
