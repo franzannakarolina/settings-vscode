@@ -1,104 +1,141 @@
 {
-    "editor.wordWrapColumn": 88,
-    "editor.renderWhitespace": "boundary",
-    "editor.rulers": [
-        88
-    ],
-    "terminal.integrated.fontSize": 14,
-    "editor.fontFamily": "'Fira Code', 'monospace', monospace",
-    "editor.fontLigatures": true,
-    "editor.renderIndentGuides": false,
-    "breadcrumbs.enabled": true,
-    "editor.minimap.enabled": true,
-    "editor.renderControlCharacters": false,
-    "workbench.colorTheme": "Monokai",
-    // "editor.fontFamily": "Monaco",
-    "files.trimTrailingWhitespace": true,
-    "editor.lineHeight": 22,
-    "workbench.activityBar.visible": true,
-    "workbench.statusBar.feedback.visible": false,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "*/.js.map": true,
-        "*/.js": {
-            "when": "$(basename).ts"
+    "editor.fontFamily": "Victor Mono",
+    "editor.fontSize": 18,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": [
+              //following will be in italic (=FlottFlott)
+              "comment",
+              "entity.name.type.class", //class names
+              "keyword", //import, export, return…
+              "constant", //String, Number, Boolean…, this, super
+              "storage.modifier", //static keyword
+              "storage.type.class.js", //class keyword
+            ],
+            "settings": {
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": [
+              //following will be excluded from italics (VSCode has some defaults for italics)
+              "invalid",
+              "keyword.operator",
+              "constant.numeric.css",
+              "keyword.other.unit.px.css",
+              "constant.numeric.decimal.js",
+              "constant.numeric.json"
+            ],
+            "settings": {
+              "fontStyle": ""
+            }
+          }
+        ]
+      },
+    "terminal.integrated.fontSize": 18,
+        "editor.wordWrapColumn": 88,
+        "editor.renderWhitespace": "boundary",
+        "editor.rulers": [
+            88
+        ],
+
+        "editor.fontLigatures": true,
+        "breadcrumbs.enabled": true,
+        "editor.minimap.enabled": true,
+        "editor.renderControlCharacters": false,
+        "workbench.colorTheme": "Monokai",
+        // "editor.fontFamily": "Monaco",
+        "files.trimTrailingWhitespace": true,
+        "editor.lineHeight": 22,
+        "workbench.activityBar.visible": true,
+        "workbench.statusBar.feedback.visible": false,
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "*/.js.map": true,
+            "*/.js": {
+                "when": "$(basename).ts"
+            },
+            "*/.pyc": {
+                "when": "$(basename).py"
+            },
+            "**/_pycache_": true,
+            "*/.jar": {
+                "when": "$(basename).kt"
+            },
         },
-        "*/.pyc": {
-            "when": "$(basename).py"
+        "workbench.tree.indent": 25,
+        "editor.fontWeight": "100",
+        // Python settings
+        "python.autoComplete.extraPaths": [
+            "/"
+        ],
+        "python.autoComplete.addBrackets": true,
+        "python.venvPath": "~/venv/",
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.linting.enabled": true,
+        "python.pythonPath": "venv/bin/python",
+        "python.linting.flake8Args": [
+            "--max-line-length=88",
+            // "--ignore=E402,F841,F401,E302,E305",
+        ],
+        "python.sortImports.path": "~/.virtualenvs/vscode/bin/isort",
+        "python.formatting.provider": "black",
+        "explorer.confirmDragAndDrop": false,
+        "explorer.confirmDelete": false,
+        "window.title": "${activeEditorLong}${separator}${rootName}",
+        "workbench.editor.enablePreview": false,
+        "[python]": {
+            "editor.defaultFormatter": "ms-python.python"
         },
-        "**/_pycache_": true,
-        "*/.jar": {
-            "when": "$(basename).kt"
+        "python.insidersChannel": "off",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "workbench.editorAssociations": {
+            "*.ipynb": "jupyter-notebook"
         },
-    },
-    "workbench.tree.indent": 25,
-    "editor.fontWeight": "100",
-    // Python settings
-    "python.autoComplete.extraPaths": [
-        "/"
-    ],
-    "python.autoComplete.addBrackets": true,
-    "python.venvPath": "~/venv/",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true,
-    "python.pythonPath": "venv/bin/python",
-    "python.linting.flake8Args": [
-        "--max-line-length=88",
-        // "--ignore=E402,F841,F401,E302,E305",
-    ],
-    "python.sortImports.path": "~/.virtualenvs/vscode/bin/isort",
-    "python.formatting.provider": "black",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "window.title": "${activeEditorLong}${separator}${rootName}",
-    "workbench.editor.enablePreview": false,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "python.insidersChannel": "off",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "python.analysis.completeFunctionParens": true,
-    "python.analysis.extraPaths": [
-        "wallet/chalicelib"
-    ],
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "python.defaultInterpreterPath": "venv/bin/python",
-    "bracket-pair-colorizer-2.depreciation-notice": false,
-    "liveServer.settings.donotShowInfoMsg": true,
+        "python.analysis.completeFunctionParens": true,
+        "python.analysis.extraPaths": [
+            "wallet/chalicelib"
+        ],
+        "notebook.cellToolbarLocation": {
+            "default": "right",
+            "jupyter-notebook": "left"
+        },
+        "python.defaultInterpreterPath": "venv/bin/python",
+        "bracket-pair-colorizer-2.depreciation-notice": false,
+        "liveServer.settings.donotShowInfoMsg": true,
 
 
-  // formatter
-  "prettier.tabWidth": 2,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "none",
-  "prettier.arrowParens": "avoid",
-    "prettier.endOfLine": "auto",
-    "tabnine.experimentalAutoImports": true,
-    "kite.showWelcomeNotificationOnStartup": false,
-    "workbench.startupEditor": "none",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+      // formatter
+      "prettier.tabWidth": 2,
+      "prettier.semi": false,
+      "prettier.singleQuote": true,
+      "prettier.trailingComma": "none",
+      "prettier.arrowParens": "avoid",
+        "prettier.endOfLine": "auto",
+        "tabnine.experimentalAutoImports": true,
+        "kite.showWelcomeNotificationOnStartup": false,
+        "workbench.startupEditor": "none",
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "workbench.iconTheme": "material-icon-theme",
+        "[jsonc]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
 
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "auto",
-    "git.enableSmartCommit": true,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+        "editor.suggestSelection": "first",
+        "vsintellicode.modify.editor.suggestSelection": "auto",
+        "git.enableSmartCommit": true,
+        "[css]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "terminal.integrated.env.osx": {
+          "FIG_NEW_SESSION": "1"
+        },
+        "editor.guides.indentation": false,
 }
